@@ -1,0 +1,163 @@
+{
+  "address": "7fCTzxzei5se329Gtbhr7cu2C8Qmx1gK7NVFagFKXuBd",
+  "metadata": {
+    "name": "bookeeper",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "get_trades",
+      "discriminator": [
+        33,
+        112,
+        129,
+        151,
+        96,
+        16,
+        110,
+        37
+      ],
+      "accounts": [
+        {
+          "name": "base_account",
+          "writable": true
+        }
+      ],
+      "args": [],
+      "returns": {
+        "vec": {
+          "defined": {
+            "name": "Trade"
+          }
+        }
+      }
+    },
+    {
+      "name": "initialize",
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "base_account",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "save_trade",
+      "discriminator": [
+        150,
+        92,
+        148,
+        147,
+        13,
+        247,
+        211,
+        61
+      ],
+      "accounts": [
+        {
+          "name": "base_account",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "item",
+          "type": "string"
+        },
+        {
+          "name": "price",
+          "type": "string"
+        },
+        {
+          "name": "time",
+          "type": "i64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "BaseAccount",
+      "discriminator": [
+        16,
+        90,
+        130,
+        242,
+        159,
+        10,
+        232,
+        133
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "NoTrades",
+      "msg": "No trades found."
+    }
+  ],
+  "types": [
+    {
+      "name": "BaseAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "trades",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "Trade"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Trade",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "item",
+            "type": "string"
+          },
+          {
+            "name": "price",
+            "type": "string"
+          },
+          {
+            "name": "time",
+            "type": "i64"
+          }
+        ]
+      }
+    }
+  ]
+}
