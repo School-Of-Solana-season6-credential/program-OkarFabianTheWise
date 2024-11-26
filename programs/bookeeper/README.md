@@ -53,7 +53,7 @@ Follow these steps to build and test the Anchor program:
 1. Clone the repository:  
    ```bash  
    git clone git@github.com:School-of-Solana/program-OkarFabianTheWise.git
-   cd bookeeper/programs/bookeeper  
+   cd program-OkarFabianTheWise  
    ```  
 
 2. Build the program:  
