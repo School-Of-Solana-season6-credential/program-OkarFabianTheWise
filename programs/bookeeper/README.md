@@ -24,7 +24,7 @@ Bookeeper is a decentralized application (dApp) built on the Solana blockchain. 
 
 ## **Live Deployment**  
 
-- **Frontend App**: [Bookeeper Live](https://bookeeperapp.vercel.app)  
+- **Frontend App**: [Bookeeper Live](https://bookeeperapp.vercel.app/)  
 - **Solana Program**: Deployed on Solana Devnet.  
 
 ---
@@ -52,7 +52,7 @@ Follow these steps to build and test the Anchor program:
 #### **Steps**  
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/your-repo/bookeeper.git  
+   git clone git@github.com:School-of-Solana/program-OkarFabianTheWise.git
    cd bookeeper/programs/bookeeper  
    ```  
 
