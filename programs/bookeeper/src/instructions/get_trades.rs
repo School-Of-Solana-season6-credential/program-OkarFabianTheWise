@@ -13,6 +13,11 @@ pub fn get_trades(ctx: Context<GetTrades>) -> Result<Vec<Trade>> {
 
 #[derive(Accounts)]
 pub struct GetTrades<'info> {
-    #[account(mut)]
+    #[account(
+        seeds = [b"base_account", user.key().as_ref()
+        ], 
+        bump = base_account.bump
+    )]
     pub base_account: Account<'info, BaseAccount>,
+    pub user: Signer<'info>,
 }

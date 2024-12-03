@@ -4,14 +4,15 @@ pub mod instructions;
 pub mod state;
 
 use instructions::*;
-declare_id!("7fCTzxzei5se329Gtbhr7cu2C8Qmx1gK7NVFagFKXuBd");
+
+declare_id!("5bN52p9BcuUrry1rJPpZUkdJmpZy1uq4ViCNs387kZGd");
 
 #[program]
 pub mod bookeeper {
     use super::*;
 
-    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        instructions::initialize::initialize(ctx)
+    pub fn initialize(ctx: Context<Initialize>, bump: u8) -> Result<()> {
+        instructions::initialize::initialize(ctx, bump)
     }
 
     pub fn save_trade(

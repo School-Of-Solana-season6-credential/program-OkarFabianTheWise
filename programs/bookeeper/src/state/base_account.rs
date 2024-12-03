@@ -4,4 +4,5 @@ use anchor_lang::prelude::*;
 #[account]
 pub struct BaseAccount {
     pub trades: Vec<Trade>,
+    pub bump: u8,
 }

@@ -11,6 +11,12 @@ pub fn save_trade(ctx: Context<SaveTrade>, item: String, price: String, time: i6
 
 #[derive(Accounts)]
 pub struct SaveTrade<'info> {
-    #[account(mut)]
+    #[account(
+        mut,
+        seeds = [b"base_account", user.key().as_ref()
+        ], 
+        bump = base_account.bump
+    )]
     pub base_account: Account<'info, BaseAccount>,
+    pub user: Signer<'info>,
 }

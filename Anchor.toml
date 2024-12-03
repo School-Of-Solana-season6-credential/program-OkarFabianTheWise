@@ -6,7 +6,7 @@ solana_version = "1.18.18"
 seeds = false
 skip-lint = false
 [programs.localnet]
-bookeeper = "B8tPGxaCt339EPCJy4mbwU3GDNvTszpKWT8iv4Vg3L4R"
+bookeeper = "5bN52p9BcuUrry1rJPpZUkdJmpZy1uq4ViCNs387kZGd"
 
 [registry]
 url = "https://api.apr.dev"
